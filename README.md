@@ -1,4 +1,5 @@
 # Frontend-Developer
 
 This is a practice repository of self-learning the FrontEnd development.
-It includes simple projects and practice from scratch
+It includes simple projects and practice from scratch.
+Go to another branch to see the progress.
