@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            font-size: 75px;
+            text-align: center;
+            color: brown;
+        }
+    </style>
+</head>
+<p id="output">
+</p>
+<body>
+    <script>
+        const num1 = Number(prompt("Enter the first number"));
+        const num2 = Number(prompt("Enter the second number"));
+
+        const sum = num1 + num2;
+
+        document.getElementById("output").textContent =
+        num1 + " + " + num2 + " = " + sum;
+    </script>
+</body>
+</html>
