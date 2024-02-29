@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            font-size: 100px;
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        const name = prompt("Enter your name");
+
+        document.getElementById("output").textContent =
+        "Hello, " + name;
+    </script>
+</body>
+</html>
