@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            font-size: 25px;
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<pre id="output"></p>
+<body>
+    <script>
+        document.getElementById("output").innerHTML = "a   a^2   a^3<br>"; 
+        for(let i = 1; i <= 4; i++) {
+            document.getElementById("output").innerHTML += 
+            i +"   " + (i**2) + "   " + (i**3) + "<br>";
+        }
+    </script>
+</body>
+</html>
