@@ -21,12 +21,18 @@
         document.getElementById("output").innerHTML =
         "Before swapping: " + "a = " + num1 + "; b = " + num2 + "<br>";
 
-        let temp = num1;
-        num1 = num2;
-        num2 = temp;
+        [num1, num2] = swap(num1, num2);
 
         document.getElementById("output").innerHTML +=
         "After swapping: " + "a = " + num1 + "; b = " + num2;
+
+        function swap(a , b){
+            const temp = a;
+            a = b;
+            b = temp;
+
+            return [a, b];
+        }
     </script>
 </body>
 </html>
