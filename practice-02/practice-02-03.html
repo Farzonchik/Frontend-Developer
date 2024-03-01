@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        let input = Number(prompt("Enter the number"));
+        if(input % 2 != 0) {
+            input++;
+            document.getElementById("output").textContent = input;
+        } else {
+            document.getElementById("output").textContent = input;
+        }
+    </script>
+</body>
+</html>
