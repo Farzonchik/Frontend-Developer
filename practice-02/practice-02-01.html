@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        let num1 = Number(prompt("First Number"));
+        let num2 = Number(prompt("Second Number"));
+
+        document.getElementById("output").innerHTML =
+        "Before swapping: " + "a = " + num1 + "; b = " + num2 + "<br>";
+
+        let temp = num1;
+        num1 = num2;
+        num2 = temp;
+
+        document.getElementById("output").innerHTML +=
+        "After swapping: " + "a = " + num1 + "; b = " + num2;
+    </script>
+</body>
+</html>
