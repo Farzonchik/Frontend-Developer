@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            text-align: center;
+            color: red;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        const a = Number(prompt("Enter the value of a"));
+        const b = Number(prompt("Enter the value of a"));
+        const c = Number(prompt("Enter the value of a"));
+
+        const result = a * b * c;
+
+        document.getElementById("output").textContent = 
+        "Volume of parallelepiped (" + a + " x " + b + " x " + c + ") equals " + result;
+    </script>
+</body>
+</html>
