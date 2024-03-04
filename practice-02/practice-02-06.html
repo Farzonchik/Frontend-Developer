@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            font-size: 50px;
+            padding: 50px;
+            text-align: center;
+            color: black;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        const input = parseFloat(prompt("Enter number as ft")).toFixed(2);
+
+        const meter = parseFloat(input * 0.305).toFixed(2);
+
+        document.getElementById("output").textContent = 
+        input + "ft. = " + meter + "m.";
+    </script>
+</body>
+</html>

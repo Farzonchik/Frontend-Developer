@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            font-size: 50px;
+            text-transform: uppercase;
+            text-decoration-color: black;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        const min = Number(prompt("Enter the min"));
+        const max = Number(prompt("Enter the max"));
+
+        const random = Math.trunc(min + Math.random() * (max - min + 1));
+
+        document.getElementById("output").textContent = 
+        "The random number is: " + random;
+    </script>
+</body>
+</html>
