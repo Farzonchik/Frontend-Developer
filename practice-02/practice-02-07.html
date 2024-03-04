@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        var inputs = prompt("Enter the radius and length of cilinder").split(" ");
+        const area = parseFloat(Math.PI * parseFloat(inputs[0]) * parseFloat(inputs[0])).toFixed(2);
+        const volume = parseFloat(area * parseFloat(inputs[1])).toFixed(2);
+
+        document.getElementById("output").innerHTML = 
+        "Area is " + area + "<br>";
+        document.getElementById("output").innerHTML +=
+        "Volume is " + volume;
+    </script>
+
+    <style>
+        #output {
+            text-align: center;
+            color: blue;
+            font-weight: bold;
+            text-decoration:underline;
+            font-size: 50px;
+            padding: 250px;
+        }
+    </style>
+</body>
+</html>
