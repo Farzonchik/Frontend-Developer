@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        const pounds = Number(prompt("Enter the size in ft"));
+        const inches = Number(prompt("Enter the height in inches"));
+
+        const kg = parseFloat(pounds * 0.45359237);
+        const meter = parseFloat(inches * 0.0254);
+        const BMI = parseFloat(kg / (Math.pow(meter, 2))).toFixed(2);
+
+        document.getElementById("output").textContent = 
+        "BMI equals " + BMI;
+    </script>
+
+    <style>
+        #output {
+            font-size: 50px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: chocolate;
+            padding: 250px;
+            background-image: url('bmi.jpg');
+        }
+    </style>
+</body>
+</html>

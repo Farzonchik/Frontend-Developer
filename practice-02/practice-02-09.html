@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        const CURRENT_POPULATION = Number(312032486);
+
+        for(let i = 1; i <= 1000; i *= 10) {
+            const oneYearInSec = Number(i * 365 * 24 * 60 * 60);
+
+            const birth = parseInt(oneYearInSec / 7);
+            const death = parseInt(oneYearInSec / 13);
+            const migrants = parseInt(oneYearInSec / 45);
+
+            const totalInOne = CURRENT_POPULATION + birth - death + migrants;
+
+            document.getElementById("output").innerHTML += 
+            "Population of the US after " + i + " year: " + totalInOne + "<br>";
+        }
+    </script>
+
+    <style>
+        #output {
+            text-align: right;
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+        }
+        body {
+            padding: 20px;
+            background-image: url('us.jpg');
+            background-size: con;
+        }
+    </style>
+</body>
+</html>
