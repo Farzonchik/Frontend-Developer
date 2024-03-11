@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('us.jpg');
+        }
+        #year {
+            text-align: center;
+            color: black;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #label {
+            text-align: center;
+            color: black;
+            text-transform: uppercase;
+            padding: 50px;
+
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #output {
+            text-align: center;
+            font-size: 40px;
+            color: red;
+            font-weight: bold;
+            padding: 600px;
+        }
+    </style>
+</head>
+<body>
+    <label for="year" id="label">Enter the number of year: </label>
+    <input type="number" id="year"><br><br>
+
+    <p id="output"></p>
+
+    <script>
+        const CURRENT_POPULATION = Number(312032486);
+
+        const input = document.getElementById("year");
+        const output = document.getElementById("output");
+
+        input.addEventListener("input", function() {
+            const year = Number(input.value);
+            const oneYearInSec = year * 365 * 24 * 60 * 60;
+
+            const birth = oneYearInSec / 7;
+            const death = oneYearInSec / 13;
+            const migrants = oneYearInSec / 45;
+
+            const totalInOne = parseInt(CURRENT_POPULATION + birth - death + migrants);
+            output.innerHTML = "Population of the US after " + year + " years: " + totalInOne + "<br>";
+        });
+    </script>
+</body>
+</html>
