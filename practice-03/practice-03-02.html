@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="number" id="label">Enter a number: </label>
+    <input type="number" id="input">
+    <p id="output"></p>
+
+    <script>
+        const input = document.getElementById("input");
+        const output = document.getElementById("output");
+
+        input.addEventListener("input", function(){
+            const num = Number(input.value);
+
+            if(num % 2 == 0) {
+                output.textContent = num + " number is even";
+            } else {
+                output.textContent = num + " number is odd";
+            }
+        });
+    </script>
+
+    <style>
+        #label {
+            padding-left: 600px;
+            font-size: 50px;
+            color: black;
+        }
+
+        #output {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #input {
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</body>
+</html>
