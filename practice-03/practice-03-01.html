@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            background-image: url('number.png');
+            background-repeat: space;
+        }
+
+        #inputLabel {
+            color: red;
+            font-size: medium;
+            margin-top: 250px;
+        }
+
+        #input {
+            margin-bottom: 250px;
+        }
+
+        #output {
+            text-align: center;
+            color: black;
+            text-shadow: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <label for="number" id="inputLabel">Enter a real number:</label>
+    <input type="number" id="input"><br><br>
+    
+    <p id="output"></p>
+    <script>
+        const input = document.getElementById("input");
+        const output = document.getElementById("output");
+
+        input.addEventListener("input", function () {
+            let number = parseFloat(input.value);
+            output.innerHTML = "|" + number + "| = ";
+
+            if(number < 0){
+                number = -number;
+            }
+
+            output.innerHTML += number;
+        }); 
+    </script>
+</body>
+</html>
