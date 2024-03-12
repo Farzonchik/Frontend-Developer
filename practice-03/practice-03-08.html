@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter the number of points: <input type="number" id="year"></label>
+    <button id="check">Check the grade</button>
+    <p id="output"></p>
+
+    <script>
+        const input = document.getElementById("year");
+        const output = document.getElementById("output");
+        const button = document.getElementById("check");
+
+        button.addEventListener("click", function() {
+            let grade = "";
+            const score = input.value;
+            if(score > 100) {
+                grade += "Grade " + grade + " is invalid";
+            } else if (score >= 90 && score <= 100) {
+                grade += "A";
+            } else if (score >= 80) {
+                grade += "B";
+            } else if (score >= 70) {
+                grade += "C";
+            } else if (score >= 60) {
+                grade += "D";
+            } else {
+                grade += "F";
+            }
+
+            output.textContent = 
+            "Grade: " + grade;
+        });
+    </script>
+
+    <style>
+        #output {
+            color: black;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</body>
+</html>
