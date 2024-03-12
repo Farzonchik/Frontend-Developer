@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+
+    <script>
+        const num1 = Number(prompt("Enter the first number"));
+        const num2 = Number(prompt("Enter the second number"));
+        const num3 = Number(prompt("Enter the third number"));
+
+        const output = document.getElementById("output");
+
+        if (num1 > num2 && num1 > num3) {
+            output.textContent = 
+            "Number " + num1 + " is the maximum";
+        } else if (num2 > num1 && num2 > num3) {
+            output.textContent = 
+            "Number " + num2 + " is the maximum";
+        } else if (num3 > num1 && num3 > num2) {
+            output.textContent = 
+            "Number " + num3 + " is the maximum";
+        }
+    </script>
+
+    <style>
+        #output {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: normal;
+            color: black;
+        }
+    </style>
+</body>
+</html>
