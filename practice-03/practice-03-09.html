@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter the month: <input type="number" id="month"></label>
+    <button id="button">Check the month</button>
+    <p id="output"></p>
+
+    <script>
+        const input = document.getElementById("month");
+        const output = document.getElementById("output");
+        const button = document.getElementById("button");
+
+        button.addEventListener("click", function() {
+            let message = "";
+            const month = input.value;
+
+            if (month < 1 || month > 12) {
+                message += "Incorrect input of month";
+            } else if(month == 1) {
+                message += "January";
+            } else if(month == 2) {
+                message += "February";
+            } else if(month == 3) {
+                message += "March";
+            } else if(month == 4) {
+                message += "April";
+            } else if(month == 5) {
+                message += "May";
+            } else if(month == 6) {
+                message += "June";
+            } else if(month == 7) {
+                message += "July";
+            } else if(month == 8) {
+                message += "August";
+            } else if(month == 9) {
+                message += "September";
+            } else if(month == 10) {
+                message += "October";
+            } else if(month == 11) {
+                message += "November";
+            } else if(month == 12) {
+                message += "December";
+            }
+
+            output.textContent = message;
+        });
+    </script>
+
+    <style>
+        #input {
+            font-size: 20px;
+            color: black;
+        }
+        #button {
+            font-size: 20px;
+            color: black;
+        }
+
+        #output {
+            color: black;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</body>
+</html>
