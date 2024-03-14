@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="inputForm">
+        <label>Enter the month <input type="number" id="input"></label>
+        <button type="submit">Check the season</button>
+    </form>
+    <p id="output"></p>
+
+    <script>
+        const input = document.getElementById("input");
+        const output = document.getElementById("output");
+
+
+        document.getElementById("inputForm").addEventListener ("submit", event => {
+            event.preventDefault();
+            const num = Number(input.value);
+            let message = "";
+                
+            if (num > 2 && num < 6) message += "Spring";
+            else if (num > 5 && num < 9) message += "August";
+            else if (num > 8 && num < 12) message += "Fall";
+            else if (num == 12 || num > 0 && num < 3) message += "Winter";
+            else message += "Invalid input of month";
+
+            output.textContent = message;
+        });
+    </script>
+
+    <style>
+        #inputForm {
+            text-align: center;
+            font-size: 30px;
+            color: black;
+        }
+
+        #output {
+            text-align: center;
+            font-size: 30px;
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+</body>
+</html>
