@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="inputForm">
+        <label>Enter the month: <input type="number" id="input"></label>
+        <button type="submit">Check the month</button>
+    </form>
+    <p id="output"></p>
+
+    <script>
+        const input = document.getElementById("input");
+        const output = document.getElementById("output");
+
+        document.getElementById("inputForm").addEventListener("submit", event=> {
+            event.preventDefault();
+            let message = "";
+
+            switch (Number(input.value)) {
+                case 12: case 1: case 2: {
+                    message += "Winter";
+                    break;
+                }
+                case 3: case 4: case 5: {
+                    message += "Spring";
+                    break;
+                }
+                case 6: case 7: case 8: {
+                    message += "Summer";
+                    break;
+                }
+                case 9: case 10: case 11: {
+                    message += "Fall";
+                    break;
+                }
+                default: {
+                    message += "Invalid input of month";
+                    break;
+                }
+            }
+
+            output.textContent = message;
+        });
+    </script>
+
+    <style>
+        body {
+            background-image: url("month.png");
+        }
+
+        #inputForm {
+            text-align: center;
+            font-size: 25px;
+            color: black;
+        }
+
+        #output {
+            text-align: center;
+            color: black;
+            font-size: 25px;
+        }
+    </style>
+</body>
+</html>
